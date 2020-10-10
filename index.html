@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <title>Aula 01</title>
+</head>
+<body>
+    <div id="app1">
+        <div ng-controller="controlador1">
+            <label>Name:</label>
+            <input type="text" ng-model="nome" placeholder="Digite seu nome">
+            <hr>
+            <!--tem essa forma de mostrar a variável-->
+            <h1>Olá {{nome}}!</h1>
+
+            <!--e tem essa aqui também-->
+            <h2 ng-bind="nome"></h2>
+            <hr><br>
+        </div>    
+    </div>
+    <div id="app2">    
+        <div ng-controller="controlador2">
+            <h2>Contador</h2>
+            <h2>{{contador}}</h2>
+            <button ng-click="contador = contador - 10;">sub - 10</button>
+            <button ng-click="contador = 0;">zerar</button>
+            <button ng-click="contador = contador + 10;">add + 10</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
